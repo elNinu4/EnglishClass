@@ -1,0 +1,106 @@
+/* style.css */
+:root{
+  --ink:#1b2a41;
+  --ink-soft:#5a6b82;
+  --accent:#e8543f;
+  --teal:#2f7d8c;
+  --bg:#fbf8f3;
+  --card:#ffffff;
+  --line:#e8e1d6;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(251,248,243,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:-.01em;font-size:1.05rem;text-decoration:none}
+.brand span{color:var(--accent)}
+.nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:.93rem;color:var(--ink-soft);font-weight:500}
+.nav a:hover{color:var(--accent)}
+
+/* ---------- hero ---------- */
+.hero{padding:72px 0 48px;text-align:center}
+/* .eyebrow{
+  display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--teal);background:#e7f1f2;
+  padding:6px 14px;border-radius:999px;margin-bottom:20px;
+} */
+h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.12;letter-spacing:-.025em;font-weight:800}
+.hero p{max-width:600px;margin:18px auto 0;color:var(--ink-soft);font-size:1.05rem}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;
+  font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;
+  font-family:inherit;transition:transform .15s ease, box-shadow .15s ease, background .15s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(232,84,63,.28)}
+.btn-primary:hover{background:#d9452f}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:#cfc5b5}
+.surprise{margin-top:22px;font-size:.95rem;color:var(--teal);font-weight:600;min-height:26px}
+
+/* ---------- word of the day ---------- */
+.wotd{
+  display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);
+  border-radius:var(--radius);padding:22px 26px;margin-bottom:56px;
+}
+.wotd-label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.wotd h3{font-size:1.5rem;letter-spacing:-.01em;margin-top:2px}
+.wotd .pos{font-style:italic;color:var(--ink-soft);font-weight:400;font-size:1rem}
+.wotd p{color:var(--ink-soft);margin-top:6px;font-size:.95rem}
+.wotd .example{color:var(--ink);font-style:italic;margin-top:10px}
+.wotd-body{flex:1;min-width:240px}
+
+/* ---------- sections ---------- */
+section{padding-bottom:56px}
+h2{font-size:1.4rem;letter-spacing:-.015em;margin-bottom:8px}
+.section-sub{color:var(--ink-soft);font-size:.95rem;margin-bottom:26px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{
+  display:flex;flex-direction:column;gap:6px;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;text-decoration:none;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(27,42,65,.09);border-color:#dcd3c4}
+.card-icon{font-size:1.7rem;line-height:1}
+.card h3{font-size:1.02rem;margin-top:6px}
+.card p{font-size:.9rem;color:var(--ink-soft);flex:1}
+.card-link{font-size:.83rem;font-weight:700;color:var(--accent);margin-top:8px}
+
+/* ---------- announcements ---------- */
+.news{list-style:none;display:flex;flex-direction:column;gap:12px}
+.news li{
+  display:flex;gap:16px;align-items:baseline;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;
+}
+.news time{font-size:.78rem;font-weight:700;color:var(--teal);white-space:nowrap;text-transform:uppercase;letter-spacing:.06em}
+.news p{font-size:.94rem}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--ink-soft);font-size:.88rem}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:560px){
+  .hero{padding:48px 0 36px}
+  .nav ul{gap:16px}
+}

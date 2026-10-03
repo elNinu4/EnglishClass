@@ -1,0 +1,82 @@
+/* games/style.css
+   Adds to the shared theme in ../style.css — doesn't replace it. */
+
+/* ---------- active nav state ---------- */
+.nav a.active{color:var(--accent);font-weight:600}
+
+/* ---------- tighter hero for inner pages ---------- */
+.hero-compact{padding:56px 0 36px}
+
+/* ---------- section heading row ---------- */
+.section-head{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  margin-bottom:18px;
+}
+.section-head h2{margin-bottom:0}
+
+/* ---------- pills ---------- */
+.pill{
+  display:inline-block;white-space:nowrap;
+  font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px;
+}
+.pill-live{background:#e7f1f2;color:var(--teal)}
+.pill-soon{background:#f2ece2;color:#8a7a63}
+
+/* ---------- game card ---------- */
+.card-game{position:relative}
+.card-top{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+}
+.card-game .acronym{
+  font-size:.72rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal);margin-top:-2px;
+}
+.card-game .meta{
+  display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;
+}
+.card-game .meta span{
+  font-size:.7rem;font-weight:600;color:var(--ink-soft);
+  background:var(--bg);border:1px solid var(--line);
+  padding:4px 9px;border-radius:999px;
+}
+
+/* ---------- placeholder / ghost cards ---------- */
+.card-soon{
+  justify-content:center;align-items:center;text-align:center;
+  background:transparent;
+  border:2px dashed #ddd3c4;
+  box-shadow:none;
+  min-height:200px;
+  cursor:default;
+}
+.card-soon:hover{transform:none;box-shadow:none;border-color:#cfc0aa}
+.card-soon .plus{
+  font-size:1.6rem;font-weight:300;line-height:1;color:#c8b9a2;
+}
+.card-soon h3{font-size:.98rem;color:var(--ink);margin-top:8px}
+.card-soon p{font-size:.85rem;flex:0}
+
+/* ---------- toast ---------- */
+.toast{
+  position:fixed;left:50%;bottom:28px;z-index:60;
+  transform:translate(-50%,20px);
+  background:var(--ink);color:#fff;
+  font-size:.88rem;font-weight:600;
+  padding:12px 22px;border-radius:999px;
+  box-shadow:0 12px 30px rgba(27,42,65,.28);
+  opacity:0;pointer-events:none;
+  transition:opacity .25s ease, transform .25s ease;
+  max-width:calc(100vw - 40px);text-align:center;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- responsive ---------- */
+@media (max-width:560px){
+  .hero-compact{padding:36px 0 26px}
+  .card-soon{min-height:150px}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition-duration:.001ms !important}
+}

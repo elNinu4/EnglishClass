@@ -1,0 +1,70 @@
+<!-- games/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alphabet Match · English Class</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+      <a class="back" href="../index.html">← All games</a>
+      <h1>Alphabet Match</h1>
+      <button id="soundBtn" class="icon-btn" type="button" aria-label="Turn sound off">🔊</button>
+    </header>
+
+    <section class="hud">
+      <div class="stat">
+        <span class="stat-label">Pairs</span>
+        <span class="stat-value" id="pairsStat">0 / 8</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Moves</span>
+        <span class="stat-value" id="movesStat">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Time</span>
+        <span class="stat-value" id="timeStat">0:00</span>
+      </div>
+
+      <div class="hud-actions">
+        <label class="select-wrap">
+          <span class="sr-only">Choose difficulty</span>
+          <select id="levelSelect">
+            <option value="6">Easy · 6 pairs</option>
+            <option value="8" selected>Medium · 8 pairs</option>
+            <option value="13">Hard · 13 pairs</option>
+            <option value="26">Full · 26 pairs</option>
+          </select>
+        </label>
+        <button id="restartBtn" class="btn btn-primary" type="button">New game</button>
+      </div>
+    </section>
+
+    <p class="hint" id="hint">
+      Tap a <strong>capital</strong> letter, then its <strong>small</strong> letter.
+    </p>
+
+    <main class="board" id="board" aria-label="Alphabet matching board"></main>
+
+  </div>
+
+  <div class="win" id="win" hidden>
+    <div class="win-card" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+      <div class="win-emoji">🎉</div>
+      <h2 id="winTitle">All matched!</h2>
+      <p id="winStats"></p>
+      <div class="win-actions">
+        <button id="playAgain" class="btn btn-primary" type="button">Play again</button>
+        <a href="../index.html" class="btn btn-ghost">Back to class</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

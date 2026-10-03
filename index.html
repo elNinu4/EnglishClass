@@ -1,0 +1,139 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr. Behmanesh's English Class</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">Behmanesh<span>.</span>English</a>
+    <ul>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#news">Class News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <!-- <span class="eyebrow">Room 12 · Grade 9</span> -->
+    <h1>Welcome to our English class</h1>
+    <p>Everything you need in one place — games, lessons, homework, and a way to reach me whenever you're stuck.</p>
+    <div class="actions">
+      <a href="#activities" class="btn btn-primary">Browse activities</a>
+      <button id="surprise" class="btn btn-ghost" type="button">🎲 Surprise me</button>
+    </div>
+    <p class="surprise" id="surpriseOut" aria-live="polite"></p>
+  </section>
+
+  <div class="wotd">
+    <div class="wotd-body">
+      <div class="wotd-label">Word of the day</div>
+      <h3><span id="wotd-word">—</span> <span class="pos" id="wotd-pos"></span></h3>
+      <p id="wotd-def"></p>
+      <p class="example" id="wotd-ex"></p>
+    </div>
+  </div>
+
+  <section id="activities">
+    <h2>Explore</h2>
+    <p class="section-sub">Pick a door — each one leads to a different part of our class.</p>
+    <div class="grid">
+
+      <a class="card" href="games/index.html">
+        <span class="card-icon">🎲</span>
+        <h3>Games &amp; Activities</h3>
+        <p>Vocabulary battles, grammar races, story dice, and quick warm-ups.</p>
+        <span class="card-link">Play →</span>
+      </a>
+
+      <a class="card" href="lessons.html">
+        <span class="card-icon">📚</span>
+        <h3>Lessons &amp; Notes</h3>
+        <p>Slides, handouts, and a recap of what we covered each week.</p>
+        <span class="card-link">Review →</span>
+      </a>
+
+      <a class="card" href="homework.html">
+        <span class="card-icon">📝</span>
+        <h3>Homework</h3>
+        <p>This week's assignments, due dates, and how to submit them.</p>
+        <span class="card-link">Check →</span>
+      </a>
+
+      <a class="card" href="reading.html">
+        <span class="card-icon">📖</span>
+        <h3>Reading Corner</h3>
+        <p>Our class novel, short stories, and reading log templates.</p>
+        <span class="card-link">Read →</span>
+      </a>
+
+      <a class="card" href="writing.html">
+        <span class="card-icon">✍️</span>
+        <h3>Writing Workshop</h3>
+        <p>Essay prompts, model paragraphs, and peer review guides.</p>
+        <span class="card-link">Write →</span>
+      </a>
+
+      <a class="card" href="speaking.html">
+        <span class="card-icon">🎤</span>
+        <h3>Speaking &amp; Listening</h3>
+        <p>Debate topics, presentation tips, and pronunciation practice.</p>
+        <span class="card-link">Practise →</span>
+      </a>
+
+      <a class="card" href="showcase.html">
+        <span class="card-icon">🏆</span>
+        <h3>Student Showcase</h3>
+        <p>Work we're proud of this month — poems, stories, and projects.</p>
+        <span class="card-link">See it →</span>
+      </a>
+
+      <a class="card" href="contact.html">
+        <span class="card-icon">✉️</span>
+        <h3>Ask a Question</h3>
+        <p>Stuck on something? Send me a message and I'll reply within a day.</p>
+        <span class="card-link">Ask →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>Class news</h2>
+    <p class="section-sub">Announcements and reminders.</p>
+    <ul class="news">
+      <li>
+        <time>Mon 14 Apr</time>
+        <p>Bring your copy of <em>The Giver</em> to Thursday's lesson — we're starting chapter 4.</p>
+      </li>
+      <li>
+        <time>Wed 16 Apr</time>
+        <p>Vocabulary quiz on Unit 6 words. The list is under <strong>Lessons &amp; Notes</strong>.</p>
+      </li>
+      <li>
+        <time>Fri 18 Apr</time>
+        <p>Short story draft due. Aim for 500 words — it doesn't have to be perfect.</p>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <p>Mr. Behmanesh · <a href="mailto:ali.behmanesh01@gmail.com">ali.behmanesh01@gmail.com</a></p>
+    <p>Office hours: Mon–Thu, 3:00–4:00 pm · Room 12</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
